@@ -29,5 +29,6 @@ public class FestivalClientFallbackFactory implements FallbackFactory<FestivalCl
 		if (cause instanceof ResponseStatusException)
 			throw (ResponseStatusException) cause;
 	}
+	
 
 }
