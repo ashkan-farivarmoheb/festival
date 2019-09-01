@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.energyaustralia.festival.client.dto.MusicFestival;
 import com.energyaustralia.festival.client.fallback.FestivalClientFallbackFactory;
 
-@FeignClient(name = "festivalClient", url = "http://eacodingtest.digital.energyaustralia.com.au", fallbackFactory = FestivalClientFallbackFactory.class)
+@FeignClient(name = "festivalClient", url = "${festival.client.host}", fallbackFactory = FestivalClientFallbackFactory.class)
 public interface FestivalClient {
 
 	@GetMapping("/api/v1/festivals")
